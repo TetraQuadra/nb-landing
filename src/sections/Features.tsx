@@ -21,11 +21,11 @@ const Features = () => {
         },
     ]
     return (
-        <section className="w-full py-16 container mx-auto">
+        <section className="w-full py-16 max-md:py-8 container mx-auto">
             <div className="mx-auto px-4 sm:px-6 lg:px-8 !w-full">
-                <div className="flex flex-col md:flex-row justify-between w-full">
+                <div className="flex flex-col md:flex-row justify-between w-full max-md:gap-4">
                     {features.map((feature) => (
-                        <div key={feature.title} className="flex flex-col items-start justify-start w-[285px]">
+                        <div key={feature.title} className="flex flex-col items-start justify-start w-[285px] max-md:w-full">
                             <div className="rounded-[24px] border-[2px] border-[#ADADAD] p-[10px] mb-4">
                                 <Image src={feature.image} alt={feature.title} width={70} height={70} />
                             </div>
