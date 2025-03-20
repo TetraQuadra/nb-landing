@@ -130,87 +130,85 @@ const Reviews = () => {
     };
 
     return (
-        <section className="py-16 container mx-auto w-full overflow-hidden">
-            <h1 className="text-[40px] font-[500] text-center mb-12"><span className="text-green-600">Our</span> Reviews</h1>
-
-            <div
-                className="w-full relative"
-                onMouseEnter={() => setIsHovering(true)}
-                onMouseLeave={() => setIsHovering(false)}
-            >
-                <div className="absolute left-0 top-0 bottom-0 w-[100px] z-10 pointer-events-none"
-                    style={{ background: 'linear-gradient(to right, var(--background) 0%, transparent 100%)' }}></div>
-
-                <div className="absolute right-0 top-0 bottom-0 w-[100px] z-10 pointer-events-none"
-                    style={{ background: 'linear-gradient(to left, var(--background) 0%, transparent 100%)' }}></div>
-
+        <section className="py-16 w-full overflow-hidden bg-[#F9F5EC]">
+            <div className="container mx-auto">
+                <h1 className="text-[40px] font-[500] text-center mb-12"><span className="text-green-600">Our</span> Reviews</h1>
                 <div
-                    ref={rowOneRef}
-                    className="flex gap-6 mb-8 overflow-x-hidden whitespace-nowrap"
+                    className="w-full relative"
+                    onMouseEnter={() => setIsHovering(true)}
+                    onMouseLeave={() => setIsHovering(false)}
                 >
-                    {firstRow.map((review, index) => (
-                        <div
-                            key={`row1-${review.id}-${index}`}
-                            className="inline-block min-w-[350px] max-w-[350px] p-6 bg-white border-2 border-[#EFEFEF] rounded-[24px] shadow-sm whitespace-normal"
-                        >
-                            <div className="flex items-center mb-4">
-                                <div className="w-12 h-12 rounded-full bg-gray-200 mr-4 overflow-hidden">
-                                    {review.avatar ? (
-                                        <Image src={review.avatar} alt={review.name} width={48} height={48} />
-                                    ) : (
-                                        <div className="w-full h-full flex items-center justify-center bg-gray-300">
-                                            {review.name.charAt(0)}
+                    <div className="absolute left-0 top-0 bottom-0 w-[100px] z-10 pointer-events-none"
+                        style={{ background: 'linear-gradient(to right, #F9F5EC 0%, transparent 100%)' }}></div>
+
+                    <div className="absolute right-0 top-0 bottom-0 w-[100px] z-10 pointer-events-none"
+                        style={{ background: 'linear-gradient(to left, #F9F5EC 0%, transparent 100%)' }}></div>
+                    <div
+                        ref={rowOneRef}
+                        className="flex gap-6 mb-8 overflow-x-hidden whitespace-nowrap"
+                    >
+                        {firstRow.map((review, index) => (
+                            <div
+                                key={`row1-${review.id}-${index}`}
+                                className="inline-block min-w-[350px] max-w-[350px] p-6 bg-white border-2 border-[#EFEFEF] rounded-[24px] shadow-sm whitespace-normal"
+                            >
+                                <div className="flex items-center mb-4">
+                                    <div className="w-12 h-12 rounded-full bg-gray-200 mr-4 overflow-hidden">
+                                        {review.avatar ? (
+                                            <Image src={review.avatar} alt={review.name} width={48} height={48} />
+                                        ) : (
+                                            <div className="w-full h-full flex items-center justify-center bg-gray-300">
+                                                {review.name.charAt(0)}
+                                            </div>
+                                        )}
+                                    </div>
+                                    <div>
+                                        <h3 className="font-medium text-[18px]">{review.name}</h3>
+                                        <div className="flex">
+                                            {renderStars()}
                                         </div>
-                                    )}
-                                </div>
-                                <div>
-                                    <h3 className="font-medium text-[18px]">{review.name}</h3>
-                                    <div className="flex">
-                                        {renderStars()}
+                                    </div>
+                                    <div className="ml-auto text-[14px] text-gray-500">
+                                        {review.date}
                                     </div>
                                 </div>
-                                <div className="ml-auto text-[14px] text-gray-500">
-                                    {review.date}
-                                </div>
+                                <p className="text-[14px]">{review.text}</p>
                             </div>
-                            <p className="text-[14px]">{review.text}</p>
-                        </div>
-                    ))}
-                </div>
-
-                {/* Второй ряд - движение влево с отступом */}
-                <div
-                    ref={rowTwoRef}
-                    className="flex gap-6 pl-[175px] overflow-x-hidden whitespace-nowrap"
-                >
-                    {secondRow.map((review, index) => (
-                        <div
-                            key={`row2-${review.id}-${index}`}
-                            className="inline-block min-w-[350px] max-w-[350px] p-6 bg-white border-2 border-[#EFEFEF] rounded-[24px] shadow-sm whitespace-normal"
-                        >
-                            <div className="flex items-center mb-4">
-                                <div className="w-12 h-12 rounded-full bg-gray-200 mr-4 overflow-hidden">
-                                    {review.avatar ? (
-                                        <Image src={review.avatar} alt={review.name} width={48} height={48} />
-                                    ) : (
-                                        <div className="w-full h-full flex items-center justify-center bg-gray-300">
-                                            {review.name.charAt(0)}
+                        ))}
+                    </div>
+                    <div
+                        ref={rowTwoRef}
+                        className="flex gap-6 pl-[175px] overflow-x-hidden whitespace-nowrap"
+                    >
+                        {secondRow.map((review, index) => (
+                            <div
+                                key={`row2-${review.id}-${index}`}
+                                className="inline-block min-w-[350px] max-w-[350px] p-6 bg-white border-2 border-[#EFEFEF] rounded-[24px] shadow-sm whitespace-normal"
+                            >
+                                <div className="flex items-center mb-4">
+                                    <div className="w-12 h-12 rounded-full bg-gray-200 mr-4 overflow-hidden">
+                                        {review.avatar ? (
+                                            <Image src={review.avatar} alt={review.name} width={48} height={48} />
+                                        ) : (
+                                            <div className="w-full h-full flex items-center justify-center bg-gray-300">
+                                                {review.name.charAt(0)}
+                                            </div>
+                                        )}
+                                    </div>
+                                    <div>
+                                        <h3 className="font-medium text-[18px]">{review.name}</h3>
+                                        <div className="flex">
+                                            {renderStars()}
                                         </div>
-                                    )}
-                                </div>
-                                <div>
-                                    <h3 className="font-medium text-[18px]">{review.name}</h3>
-                                    <div className="flex">
-                                        {renderStars()}
+                                    </div>
+                                    <div className="ml-auto text-[14px] text-gray-500">
+                                        {review.date}
                                     </div>
                                 </div>
-                                <div className="ml-auto text-[14px] text-gray-500">
-                                    {review.date}
-                                </div>
+                                <p className="text-[14px]">{review.text}</p>
                             </div>
-                            <p className="text-[14px]">{review.text}</p>
-                        </div>
-                    ))}
+                        ))}
+                    </div>
                 </div>
             </div>
         </section>
