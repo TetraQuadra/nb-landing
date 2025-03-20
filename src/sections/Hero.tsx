@@ -2,9 +2,11 @@
 
 import Image from "next/image";
 import Script from "next/script";
+import { useState } from "react";
 
 const Hero = () => {
-    // Структурированные данные для LocalBusiness
+    const [imageLoaded, setImageLoaded] = useState(false);
+
     const structuredData = {
         "@context": "https://schema.org",
         "@type": "LocalBusiness",
@@ -25,7 +27,6 @@ const Hero = () => {
         ]
     };
 
-    // Функция плавного скролла
     const handleSmoothScroll = (e: React.MouseEvent<HTMLAnchorElement>, targetId: string) => {
         e.preventDefault();
 
@@ -39,7 +40,6 @@ const Hero = () => {
                 behavior: 'smooth'
             });
 
-            // Обновляем URL с якорем
             history.pushState(null, '', targetId);
         }
     };
@@ -59,16 +59,15 @@ const Hero = () => {
             <p className="text-[18px] max-lg:text-[16px] max-md:text-[14px] font-normal max-w-[736px] text-center mb-4">
                 I make your windows sparkle with professional care and attention to detail. Experience the difference with my reliable, high-quality window cleaning services.
             </p>
-
             <Image
-                className="w-full max-md:h-[445px] max-md:object-cover max-md:rounded-[24px]"
+                className={`w-full max-md:h-[445px] max-md:object-cover max-md:rounded-[24px] transition-opacity duration-300 ${imageLoaded ? 'opacity-100' : 'skeleton-loader'}`}
                 src="/hero-image.png"
                 alt="Professional window cleaning services by N&B Cleaning"
                 width={1200}
                 height={515}
                 priority
+                onLoad={() => setImageLoaded(true)}
             />
-
             <a
                 href="#contact"
                 className="flex md:hidden bg-green-600 text-white font-medium py-3 px-[50px] rounded-[12px] hover:bg-green-700 transition-colors self-center mt-4 max-sm:w-full items-center gap-2 justify-center"

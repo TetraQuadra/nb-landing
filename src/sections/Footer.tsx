@@ -4,7 +4,6 @@ import Link from "next/link";
 import Image from "next/image";
 
 const Footer = () => {
-    // Функция плавного скролла
     const handleSmoothScroll = (e: React.MouseEvent<HTMLAnchorElement>, targetId: string) => {
         e.preventDefault();
 
@@ -18,7 +17,6 @@ const Footer = () => {
                 behavior: 'smooth'
             });
 
-            // Обновляем URL с якорем
             history.pushState(null, '', targetId);
         }
     };
