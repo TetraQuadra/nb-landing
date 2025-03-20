@@ -24,7 +24,7 @@ const OtherServices = () => {
         }
     ]
     return (
-        <section className="container mx-auto px-2 w-full">
+        <section className="container mx-auto py-16 px-2 w-full" id="other-services">
             <h1 className="text-[40px] font-[500] text-center mb-6">Other Services</h1>
             <div className="flex flex-col gap-[20px] w-full">
                 {services.map((service, index) => (

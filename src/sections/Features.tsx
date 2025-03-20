@@ -21,7 +21,7 @@ const Features = () => {
         },
     ]
     return (
-        <section className="w-full py-16 max-md:py-8 container mx-auto">
+        <section className="w-full py-16 max-md:py-8 container mx-auto" id="about">
             <div className="mx-auto px-4 sm:px-6 lg:px-8 !w-full">
                 <div className="flex flex-col md:flex-row justify-between w-full max-md:gap-4">
                     {features.map((feature) => (

@@ -171,7 +171,7 @@ const Reviews = () => {
     );
 
     return (
-        <section className="py-16 w-full overflow-hidden bg-[#F9F5EC]">
+        <section className="py-16 w-full overflow-hidden bg-[#F9F5EC]" id="reviews">
             <div className="container mx-auto">
                 <h1 className="text-[40px] font-[500] text-center mb-12"><span className="text-green-600">Our</span> Reviews</h1>
 

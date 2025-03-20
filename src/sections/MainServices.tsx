@@ -21,7 +21,7 @@ const MainServices = () => {
         },
     ]
     return (
-        <section className="w-full bg-[#F9F5EC] py-8 ">
+        <section className="w-full bg-[#F9F5EC] py-16 " id="services">
             <div className="mx-auto container px-2 max-lg:max-w-[560px]">
                 <h1 className="text-[40px] font-[500] text-center mb-6"><span className="text-green-600">Main</span> Services</h1>
                 <div className="flex flex-col lg:flex-row md:justify-between gap-[20px] w-full ">

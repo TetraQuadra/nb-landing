@@ -49,7 +49,6 @@ const ContactUs = () => {
     };
 
     const validatePhone = (phone: string): boolean => {
-        // Проверяем, что телефон содержит только цифры, плюс, пробелы, скобки и дефисы
         const phoneRegex = /^[0-9\+\(\)\s\-]+$/;
         return phoneRegex.test(phone);
     };
@@ -79,9 +78,7 @@ const ContactUs = () => {
     const handleOnChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
         const { name, value } = e.target;
 
-        // Если это поле телефона, проверяем, что вводятся только разрешенные символы
         if (name === 'phone') {
-            // Если ввод не проходит валидацию и значение не пустое, не обновляем состояние
             if (value !== '' && !validatePhone(value)) {
                 return;
             }
@@ -92,7 +89,6 @@ const ContactUs = () => {
             [name]: value
         }));
 
-        // Очищаем ошибки при изменении значения
         if (name === 'email' || name === 'phone') {
             setErrors(prev => ({
                 ...prev,
@@ -162,7 +158,7 @@ const ContactUs = () => {
     };
 
     return (
-        <section className="container mx-auto py-16 px-2 w-full">
+        <section className="container mx-auto py-16 px-2 w-full" id="contact">
 
             <div className="flex gap-16">
                 <div className="max-w-[600px] w-full mx-auto">
@@ -238,7 +234,7 @@ const ContactUs = () => {
 
                             <button
                                 type="submit"
-                                className="bg-green-600 text-white font-medium py-3 px-[50px] rounded-[12px] hover:bg-green-700 transition-colors self-center mt-2 flex items-center gap-2 max-md:w-full justify-center"
+                                className="bg-green-600 text-white font-medium py-3 px-[50px] rounded-[12px] hover:bg-green-700 transition-colors self-center mt-2 flex items-center gap-2 max-md:w-full justify-center cursor-pointer"
                                 disabled={formStatus.submitting}
                             >
                                 {formStatus.submitting ? (

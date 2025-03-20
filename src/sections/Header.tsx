@@ -30,6 +30,25 @@ const Header = () => {
         };
     }, [menuOpen]);
 
+    const handleSmoothScroll = (e: React.MouseEvent<HTMLAnchorElement>, targetId: string) => {
+        e.preventDefault();
+
+        const targetElement = document.querySelector(targetId);
+
+        if (targetElement) {
+            const offsetTop = targetElement.getBoundingClientRect().top + window.pageYOffset;
+
+            window.scrollTo({
+                top: offsetTop,
+                behavior: 'smooth'
+            });
+
+            setMenuOpen(false);
+
+            history.pushState(null, '', targetId);
+        }
+    };
+
     const toggleMenu = () => {
         setMenuOpen(!menuOpen);
     };
@@ -50,17 +69,26 @@ const Header = () => {
                     </Link>
                     <nav className="md:flex items-center gap-4 max-md:hidden">
                         {navLinks.map((link) => (
-                            <Link key={link.href} className="text-lg p-2" href={link.href}>
+                            <a
+                                key={link.href}
+                                href={link.href}
+                                className="text-lg p-2 cursor-pointer"
+                                onClick={(e) => handleSmoothScroll(e, link.href)}
+                            >
                                 {link.text}
-                            </Link>
+                            </a>
                         ))}
                     </nav>
                 </div>
 
-                <Link href="#contact" className="bg-green-600 text-white px-4 py-2 rounded-xl flex items-center gap-2 max-md:hidden">
+                <a
+                    href="#contact"
+                    className="bg-green-600 text-white px-4 py-2 rounded-xl flex items-center gap-2 max-md:hidden cursor-pointer hover:bg-green-700 transition-colors"
+                    onClick={(e) => handleSmoothScroll(e, "#contact")}
+                >
                     Contact us
                     <Image src="/arrow-right.svg" alt="Arrow right" width={20} height={20} />
-                </Link>
+                </a>
 
                 <button
                     ref={burgerButtonRef}
@@ -69,7 +97,7 @@ const Header = () => {
                     aria-label="Menu"
                 >
                     <span
-                        className={`block w-6 h-0.5 bg-gray-800 transition-transform duration-300 ease-in-out ${menuOpen ? 'transform rotate-45 translate-y-0.5' : 'mb-1.5'
+                        className={`block w-6 h-0.5 bg-gray-800 transition-transform duration-300 ease-in-out ${menuOpen ? 'transform rotate-45 translate-y-1.5' : 'mb-1.5'
                             }`}
                     />
                     <span
@@ -77,7 +105,7 @@ const Header = () => {
                             }`}
                     />
                     <span
-                        className={`block w-6 h-0.5 bg-gray-800 transition-transform duration-300 ease-in-out ${menuOpen ? 'transform -rotate-45 -translate-y-0.5' : ''
+                        className={`block w-6 h-0.5 bg-gray-800 transition-transform duration-300 ease-in-out ${menuOpen ? 'transform -rotate-45 -translate-y-1.5' : ''
                             }`}
                     />
                 </button>
@@ -90,23 +118,23 @@ const Header = () => {
             >
                 <nav className="flex flex-col p-4">
                     {navLinks.map((link) => (
-                        <Link
+                        <a
                             key={link.href}
-                            className="text-lg p-3 border-b border-gray-100 hover:bg-gray-50"
                             href={link.href}
-                            onClick={() => setMenuOpen(false)}
+                            className="text-lg p-3 border-b border-gray-100 hover:bg-gray-50"
+                            onClick={(e) => handleSmoothScroll(e, link.href)}
                         >
                             {link.text}
-                        </Link>
+                        </a>
                     ))}
-                    <Link
+                    <a
                         href="#contact"
-                        className="mt-4 bg-green-600 text-white px-4 py-3 rounded-xl flex items-center justify-center gap-2"
-                        onClick={() => setMenuOpen(false)}
+                        className="mt-4 bg-green-600 text-white px-4 py-3 rounded-xl flex items-center justify-center gap-2 hover:bg-green-700 transition-colors cursor-pointer"
+                        onClick={(e) => handleSmoothScroll(e, "#contact")}
                     >
                         Contact us
                         <Image src="/arrow-right.svg" alt="Arrow right" width={20} height={20} />
-                    </Link>
+                    </a>
                 </nav>
             </div>
         </header>
