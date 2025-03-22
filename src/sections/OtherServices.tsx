@@ -37,7 +37,7 @@ const OtherServices = () => {
                             <p className="text-[14px] font-normal ">{service.description}</p>
                         </div>
                         <div className="w-1/2 flex justify-center items-center max-md:w-[80%] max-md:relative max-md:mb-4">
-                            <Image className="w-full" src={service.image} alt={service.title} width={534} height={315} />
+                            <Image className="w-full rounded-[24px]" src={service.image} alt={service.title} width={534} height={315} />
                             <div className="hidden max-md:flex absolute bottom-[-16px] left-[-40px] p-[10px] border-[2px] border-[#EFEFEF] rounded-[24px] w-[90px] h-[90px] items-center justify-center bg-[#F2F2F2]">
                                 <Image src={service.icon} alt={service.title} width={70} height={70} />
                             </div>

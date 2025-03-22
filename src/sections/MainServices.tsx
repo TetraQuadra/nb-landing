@@ -29,7 +29,7 @@ const MainServices = () => {
                         <div key={service.title} className="flex p-[32px] max-lg:p-[24px] border-[2px] border-[#ADADAD] rounded-[24px] flex-col items-start gap-[8px] w-full lg:w-1/3 justify-center">
                             <h3 className="text-[20px] font-[500]">{service.title}</h3>
                             <p className="text-[14px] font-normal">{service.description}</p>
-                            <Image className="w-full max-lg:max-h-[230px] max-lg:object-cover rounded-[24px]" src={service.image} alt={service.title} width={324} height={362} />
+                            <Image className="w-full max-lg:max-h-[280px] max-lg:object-cover rounded-[24px] max-lg:object-[10%_30%]" src={service.image} alt={service.title} width={324} height={362} />
                         </div>
                     ))}
                 </div>
