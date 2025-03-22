@@ -55,9 +55,9 @@ const Footer = () => {
                         </nav>
                     </div>
                     <div className="flex gap-6 items-center max-lg:flex-col max-md:w-full max-md:gap-3 max-md:justify-center">
-                        <a className="flex items-center gap-2" href="tel:+07774974895">
+                        <a className="flex items-center gap-2" href="tel:+447774974895">
                             <Image src="/phone-call.svg" alt="Phone" width={20} height={20} />
-                            +0777 497 4895
+                            0777 497 4895
                         </a>
                         <a className="flex items-center gap-2" href="mailto:2024windowcleaning@gmail.com">
                             <Image src="/mail.svg" alt="Email" width={20} height={20} />

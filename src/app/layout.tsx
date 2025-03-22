@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Header from "@/sections/Header";
 import Footer from "@/sections/Footer";
+import Script from "next/script";
 
 export const metadata: Metadata = {
     title: "N&B Cleaning - Professional Window Cleaning Services",
@@ -78,6 +79,17 @@ export default function RootLayout({
                 <Header />
                 {children}
                 <Footer />
+
+                {/* Google Analytics */}
+                <Script src="https://www.googletagmanager.com/gtag/js?id=G-XN0S2P1G4N" strategy="afterInteractive" />
+                <Script id="google-analytics" strategy="afterInteractive">
+                    {`
+                    window.dataLayer = window.dataLayer || [];
+                    function gtag(){dataLayer.push(arguments);}
+                    gtag('js', new Date());
+                    gtag('config', 'G-XN0S2P1G4N');
+                    `}
+                </Script>
             </body>
         </html>
     );

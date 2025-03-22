@@ -53,6 +53,11 @@ const ContactUs = () => {
         return phoneRegex.test(phone);
     };
 
+    const validatePhoneUK = (phone: string): boolean => {
+        const phoneRegex = /^(?:\+44\s?|0)(?:\d\s?){10}$/;
+        return phoneRegex.test(phone);
+    };
+
     const handleServerResponse = (ok: boolean, msg: string) => {
         if (ok) {
             setFormStatus({
@@ -119,6 +124,11 @@ const ContactUs = () => {
             hasErrors = true;
         }
 
+        if (!validatePhoneUK(inputs.phone)) {
+            newErrors.phone = "Please enter a valid UK phone number";
+            hasErrors = true;
+        }
+
         setErrors(newErrors);
 
         if (hasErrors) {
@@ -136,7 +146,7 @@ const ContactUs = () => {
             formData.append(key, value);
         });
 
-        fetch("https://formspree.io/f/xvgkzjrd", {
+        fetch("https://formspree.io/f/mwplolpg", {
             method: "POST",
             body: formData,
             headers: {
@@ -158,9 +168,9 @@ const ContactUs = () => {
     };
 
     return (
-        <section className="container mx-auto py-16 px-2 w-full" id="contact">
+        <section className=" bg-[#F9F5EC] py-16 px-2 w-full" id="contact">
 
-            <div className="flex gap-16">
+            <div className="container mx-auto flex gap-16">
                 <div className="max-w-[600px] w-full mx-auto">
                     <h2 className="text-[40px] font-[500] text-center mb-8">Requaste the quote</h2>
                     {formStatus.submitted ? (
