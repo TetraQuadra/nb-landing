@@ -30,23 +30,27 @@ const Header = () => {
         };
     }, [menuOpen]);
 
-    const handleSmoothScroll = (e: React.MouseEvent<HTMLAnchorElement>, targetId: string) => {
+    const handleSmoothScroll = (e: React.MouseEvent<HTMLAnchorElement>, href: string, hash: string) => {
         e.preventDefault();
 
-        const targetElement = document.querySelector(targetId);
+        if (window.location.pathname === '/' || window.location.pathname === '') {
+            const targetElement = document.getElementById(hash);
 
-        if (targetElement) {
-            const offsetTop = targetElement.getBoundingClientRect().top + window.pageYOffset;
+            if (targetElement) {
+                const offsetTop = targetElement.getBoundingClientRect().top + window.pageYOffset;
 
-            window.scrollTo({
-                top: offsetTop,
-                behavior: 'smooth'
-            });
+                window.scrollTo({
+                    top: offsetTop,
+                    behavior: 'smooth'
+                });
 
-            setMenuOpen(false);
-
-            history.pushState(null, '', targetId);
+                window.history.pushState(null, '', `/#${hash}`);
+            }
+        } else {
+            window.location.href = `/${hash ? '#' + hash : ''}`;
         }
+
+        setMenuOpen(false);
     };
 
     const toggleMenu = () => {
@@ -54,9 +58,9 @@ const Header = () => {
     };
 
     const navLinks = [
-        { href: "#about", text: "About" },
-        { href: "#services", text: "Services" },
-        { href: "#reviews", text: "Reviews" }
+        { href: "/", hash: "about", text: "About" },
+        { href: "/", hash: "services", text: "Services" },
+        { href: "/", hash: "reviews", text: "Reviews" }
     ];
 
     return (
@@ -69,26 +73,26 @@ const Header = () => {
                     </Link>
                     <nav className="md:flex items-center gap-4 max-md:hidden">
                         {navLinks.map((link) => (
-                            <a
-                                key={link.href}
-                                href={link.href}
+                            <Link
+                                key={link.hash}
+                                href={`${link.href}${link.hash ? '#' + link.hash : ''}`}
                                 className="text-lg p-2 cursor-pointer"
-                                onClick={(e) => handleSmoothScroll(e, link.href)}
+                                onClick={(e) => handleSmoothScroll(e, link.href, link.hash)}
                             >
                                 {link.text}
-                            </a>
+                            </Link>
                         ))}
                     </nav>
                 </div>
 
-                <a
-                    href="#contact"
+                <Link
+                    href="/#contact"
                     className="bg-green-600 text-white px-4 py-2 rounded-xl flex items-center gap-2 max-md:hidden cursor-pointer hover:bg-green-700 transition-colors"
-                    onClick={(e) => handleSmoothScroll(e, "#contact")}
+                    onClick={(e) => handleSmoothScroll(e, "/", "contact")}
                 >
                     Contact us
                     <Image src="/arrow-right.svg" alt="Arrow right" width={20} height={20} />
-                </a>
+                </Link>
 
                 <button
                     ref={burgerButtonRef}
@@ -118,23 +122,23 @@ const Header = () => {
             >
                 <nav className="flex flex-col p-4">
                     {navLinks.map((link) => (
-                        <a
-                            key={link.href}
-                            href={link.href}
+                        <Link
+                            key={link.hash}
+                            href={`${link.href}${link.hash ? '#' + link.hash : ''}`}
                             className="text-lg p-3 border-b border-gray-100 hover:bg-gray-50"
-                            onClick={(e) => handleSmoothScroll(e, link.href)}
+                            onClick={(e) => handleSmoothScroll(e, link.href, link.hash)}
                         >
                             {link.text}
-                        </a>
+                        </Link>
                     ))}
-                    <a
-                        href="#contact"
+                    <Link
+                        href="/#contact"
                         className="mt-4 bg-green-600 text-white px-4 py-3 rounded-xl flex items-center justify-center gap-2 hover:bg-green-700 transition-colors cursor-pointer"
-                        onClick={(e) => handleSmoothScroll(e, "#contact")}
+                        onClick={(e) => handleSmoothScroll(e, "/", "contact")}
                     >
                         Contact us
                         <Image src="/arrow-right.svg" alt="Arrow right" width={20} height={20} />
-                    </a>
+                    </Link>
                 </nav>
             </div>
         </header>
