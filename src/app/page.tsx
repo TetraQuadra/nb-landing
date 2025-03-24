@@ -6,6 +6,7 @@ import MainServices from "@/sections/MainServices";
 import OtherServices from "@/sections/OtherServices";
 // import Reviews from "@/sections/Reviews";
 import ContactUs from "@/sections/ContactUs";
+import Feedback from "@/sections/Feedback";
 
 export default function Home() {
     return (
@@ -17,6 +18,7 @@ export default function Home() {
                 <OtherServices />
                 {/* <Reviews /> */}
                 <ContactUs />
+                <Feedback />
             </main>
         </div>
     );

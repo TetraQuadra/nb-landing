@@ -6,17 +6,17 @@ const Features = () => {
     const features = [
         {
             title: "Fair prices",
-            description: "Lorem ipsum dolor sit amet consectetur. Porttitor imperdiet nulla orci sit sem elementum quam. Vel amet nulla elementum sit habitant. Accumsan mauris ullamcorper enim odio placerat.",
+            description: "We offer competitive and transparent pricing for all our cleaning services. No hidden fees or unexpected charges - just honest value for your money. Regular customers benefit from special loyalty discounts to make quality cleaning affordable for everyone.",
             image: "/features/scales.svg",
         },
         {
-            title: "Realibility",
-            description: "Lorem ipsum dolor sit amet consectetur. Porttitor imperdiet nulla orci sit sem elementum quam. Vel amet nulla elementum sit habitant. Accumsan mauris ullamcorper enim odio placerat.",
+            title: "Reliability",
+            description: "Count on us to arrive on time, every time. Our professional team is committed to consistent service with meticulous attention to detail. We've built our reputation on dependability, with flexible scheduling to accommodate your busy lifestyle.",
             image: "/features/clock.svg",
         },
         {
             title: "Top quality",
-            description: "Lorem ipsum dolor sit amet consectetur. Porttitor imperdiet nulla orci sit sem elementum quam. Vel amet nulla elementum sit habitant. Accumsan mauris ullamcorper enim odio placerat.",
+            description: "Experience superior results with our advanced cleaning techniques and premium equipment. Our highly trained staff ensures every surface shines to perfection. We take pride in exceeding expectations, leaving your property spotless and pristine after every visit.",
             image: "/features/star.svg",
         },
     ]

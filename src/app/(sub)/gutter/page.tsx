@@ -2,30 +2,24 @@
 
 import Image from "next/image";
 
-const OtherServices = () => {
+const Gutter = () => {
     const services = [
         {
-            title: "Graffity cleaning",
-            description: "Professional removal of unwanted graffiti from various surfaces without damaging the underlying material. We use specialized solutions to efficiently eliminate all traces of paint and ink.",
-            image: "/other-services/service1.png",
-            icon: "/other-services/icon1.svg",
+            title: "Commercial gutter cleaning",
+            description: "We provide professional gutter cleaning for commercial properties. Prevent blockages, damage, and costly repairs with our reliable service.",
+            image: "/page-images/gutter/service1.png",
+            icon: "/page-images/service1.svg",
         },
         {
-            title: "Cladding cleaning",
-            description: "Specialized cleaning for all types of exterior cladding to remove built-up dirt, pollution, and biological growth. Restores the appearance and protects your property's cladding from premature deterioration.",
-            image: "/other-services/service2.png",
-            icon: "/other-services/icon2.svg",
-        },
-        {
-            title: "Conservatory roof cleaning",
-            description: "Thorough cleaning of conservatory roofs to remove moss, algae, and debris. Improves natural light penetration and prevents damage to seals and frames, extending the life of your conservatory.",
-            image: "/other-services/service3.png",
-            icon: "/other-services/icon3.svg",
+            title: "Domestic gutter cleaning",
+            description: "We provide professional gutter cleaning for your home. Protect your home from blockages, damage, and unnecessary costs with our reliable service.",
+            image: "/page-images/gutter/service2.png",
+            icon: "/page-images/service2.svg",
         }
     ]
     return (
-        <section className="container mx-auto py-16 px-2 w-full" id="other-services">
-            <h1 className="text-[40px] font-[500] text-center mb-6">Other Services</h1>
+        <section className="container min-h-screen mx-auto px-2 w-full" id="other-services">
+            <h1 className="text-[40px] font-[500] text-center mb-6">Gutter <span className="text-green-600">cleaning</span></h1>
             <div className="flex flex-col gap-[20px] w-full">
                 {services.map((service, index) => (
                     <div key={service.title} className={`flex ${index === 1 ? 'flex-row-reverse' : 'flex-row'} p-[32px] max-lg:p-[12px] items-center w-full justify-between gap-[132px] max-md:flex-col-reverse max-md:gap-4`}>
@@ -49,4 +43,4 @@ const OtherServices = () => {
     );
 };
 
-export default OtherServices;
+export default Gutter;

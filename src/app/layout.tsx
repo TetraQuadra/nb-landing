@@ -7,7 +7,7 @@ import Script from "next/script";
 export const metadata: Metadata = {
     title: "N&B Cleaning - Professional Window Cleaning Services",
     description: "Professional window cleaning, gutter cleaning, and fascia cleaning services. Experience crystal clear results with our reliable, high-quality window cleaning services in the UK.",
-    keywords: "window cleaning, professional window cleaner, gutter cleaning, fascia cleaning, cleaning services, crystal clear windows, residential cleaning, commercial cleaning",
+    keywords: "window cleaning, professional window cleaner, gutter cleaning, fascia cleaning, cleaning services, crystal clear windows, residential cleaning, commercial cleaning, ",
     authors: [{ name: "N&B Cleaning" }],
     generator: "Next.js",
     applicationName: "N&B Cleaning",

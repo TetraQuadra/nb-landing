@@ -25,8 +25,8 @@ const Footer = () => {
         <div>
             <div className="h-[1px] bg-[#c0c0c0] " />
             <footer className="py-4 px-8 ">
-                <div className="flex justify-between items-center max-md:flex max-md:flex-col max-md:items-center max-md:gap-6">
-                    <div className="flex items-center gap-6 max-md:w-full max-md:justify-center">
+                <div className="flex justify-between items-center max-md:flex max-md:flex-col max-md:items-start max-md:flex-start max-md:gap-3">
+                    <div className="flex items-center gap-6 max-md:w-full max-md:justify-start">
                         <Link href="/" className="flex items-center gap-2">
                             <span className="text-xl font-bold">N&B Cleaning</span>
                         </Link>
@@ -54,7 +54,7 @@ const Footer = () => {
                             </a>
                         </nav>
                     </div>
-                    <div className="flex gap-6 items-center max-lg:flex-col max-md:w-full max-md:gap-3 max-md:justify-center">
+                    <div className="flex gap-6 items-center max-lg:flex-col max-md:gap-3 max-md:justify-start max-md:items-start">
                         <a className="flex items-center gap-2" href="tel:+447774974895">
                             <Image src="/phone-call.svg" alt="Phone" width={20} height={20} />
                             0777 497 4895
