@@ -57,7 +57,7 @@ const Hero = () => {
             </h1>
 
             <p className="text-[18px] max-lg:text-[16px] max-md:text-[14px] font-normal max-w-[736px] text-center mb-4">
-                I make your windows sparkle with professional care and attention to detail. Experience the difference with my reliable, high-quality window cleaning services.
+                We make your windows sparkle with professional care and attention to detail. Experience the difference with my reliable, high-quality window cleaning services.
             </p>
             <Image
                 className={`w-full max-md:h-[445px] max-md:object-cover max-md:rounded-[24px] transition-opacity duration-300 ${imageLoaded ? 'opacity-100' : 'skeleton-loader'}`}
