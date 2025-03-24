@@ -163,7 +163,7 @@ const ContactUs = () => {
                 }
             })
             .catch(() => {
-                handleServerResponse(false, "Произошла ошибка. Пожалуйста, попробуйте еще раз.");
+                handleServerResponse(false, "An error occurred. Please try again.");
             });
     };
 
@@ -172,7 +172,7 @@ const ContactUs = () => {
 
             <div className="container mx-auto flex gap-16">
                 <div className="max-w-[600px] w-full mx-auto">
-                    <h2 className="text-[40px] font-[500] text-center mb-8">Requaste the quote</h2>
+                    <h2 className="text-[40px] font-[500] text-center mb-8">Request a quote</h2>
                     {formStatus.submitted ? (
                         <div className="text-center p-6 bg-green-50 rounded-[12px] border-2 border-green-600">
                             <h3 className="text-[24px] font-medium text-green-600 mb-2">Thank you!</h3>
