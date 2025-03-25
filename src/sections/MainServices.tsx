@@ -32,7 +32,7 @@ const MainServices = () => {
                     {services.map((service) => (
                         <div key={service.title} className="flex p-[32px] max-lg:p-[24px] border-[2px] border-[#ADADAD] rounded-[24px] flex-col items-start gap-[8px] w-full lg:w-1/3 justify-center relative">
                             <Link href={service.link}><h3 className="text-[20px] font-[500] underline">{service.title}</h3></Link>
-                            <p className="text-[14px] font-normal">{service.description}</p>
+                            <p className="text-[16px] max-lg:text-[14px] font-normal">{service.description}</p>
                             <Link className="w-full" href={service.link}> <Image className="w-full max-lg:max-h-[280px] max-lg:object-cover rounded-[24px] max-lg:object-[10%_30%]" src={service.image} alt={service.title} width={324} height={362} /></Link>
                             <Link href={service.link} className="absolute top-[12px] right-[12px] border-[2px] border-[#ADADAD] rounded-full p-[6px]">
                                 <Image src="arrow-up-right.svg" alt="arrow" width={30} height={30} />
