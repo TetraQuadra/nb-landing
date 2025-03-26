@@ -18,7 +18,7 @@ const MainServices = () => {
             link: "/gutter",
         },
         {
-            title: "Fascial cleaning",
+            title: "Fascia cleaning",
             description: "Comprehensive cleaning of fascias and soffits from dirt, mold and algae. We restore the original appearance and extend the service life of facade elements.",
             image: "/main-services/service3.png",
             link: "/fascias",
