@@ -117,7 +117,7 @@ const Feedback = () => {
     };
 
     return (
-        <section className="w-full py-16 " id="reviews">
+        <section className="w-full py-16 ">
             <div className="mx-auto container px-2 max-lg:max-w-[600px]">
                 <h1 className="text-[40px] font-[500] text-center mb-8">Leave a <span className="text-green-600">feedback</span></h1>
 

@@ -4,9 +4,9 @@ import Features from "@/sections/Features";
 import Hero from "@/sections/Hero";
 import MainServices from "@/sections/MainServices";
 import OtherServices from "@/sections/OtherServices";
-// import Reviews from "@/sections/Reviews";
 import ContactUs from "@/sections/ContactUs";
 import Feedback from "@/sections/Feedback";
+import Reviews from "@/sections/Reviews";
 
 export default function Home() {
     return (
@@ -16,7 +16,7 @@ export default function Home() {
                 <Features />
                 <MainServices />
                 <OtherServices />
-                {/* <Reviews /> */}
+                <Reviews />
                 <ContactUs />
                 <Feedback />
             </main>

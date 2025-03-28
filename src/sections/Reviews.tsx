@@ -4,7 +4,6 @@ import { useState, useEffect, useRef } from 'react';
 import Image from 'next/image';
 
 interface Review {
-    id: number;
     name: string;
     rating: number;
     date: string;
@@ -20,74 +19,34 @@ const Reviews = () => {
 
     const reviews: Review[] = [
         {
-            id: 1,
-            name: "John Smith",
+            name: "Ioanna",
             rating: 5,
-            date: "12/03/2023",
-            text: "Had my windows cleaned by this company and they did an amazing job! Very thorough and professional. Will definitely use again.",
+            date: "28/03/2025",
+            text: "A very efficient service would recommend",
         },
         {
-            id: 2,
-            name: "Sarah Johnson",
+            name: "Nicky",
             rating: 5,
-            date: "05/02/2023",
-            text: "Excellent service! My windows have never looked so clean. The team was punctual and very careful with my property.",
+            date: "28/03/2025",
+            text: "Thanks for a great job cleaning my windows . The best we have had. Very professional  and friendly, will definitely recommend and use again.",
         },
         {
-            id: 3,
-            name: "Michael Brown",
-            rating: 4,
-            date: "28/01/2023",
-            text: "Very good service at a reasonable price. The cleaners were professional and did a great job, though they missed one spot initially but fixed it when I pointed it out.",
-        },
-        {
-            id: 4,
-            name: "Emily Wilson",
+            name: "Joseph Bassey",
             rating: 5,
-            date: "14/12/2022",
-            text: "I've been using this service for over a year now and have always been impressed. Consistently great results and friendly staff.",
+            date: "27/03/2025",
+            text: "Great guy. Great job. Reliable. Give it a try...",
         },
         {
-            id: 5,
-            name: "David Taylor",
+            name: "Linda Hales",
             rating: 5,
-            date: "30/11/2022",
-            text: "Best window cleaning service I've used. They're thorough, efficient, and leave no streaks. Highly recommended!",
+            date: "26/03/2025",
+            text: "Thank you for your help, good job.",
         },
         {
-            id: 6,
-            name: "Jennifer Anderson",
-            rating: 4,
-            date: "15/10/2022",
-            text: "Very happy with the service provided. The team was professional and my windows look great!",
-        },
-        {
-            id: 7,
-            name: "Robert Martinez",
+            name: "Debbie",
             rating: 5,
-            date: "02/10/2022",
-            text: "Fantastic service from start to finish. They showed up on time and did an excellent job. My windows have never looked better!",
-        },
-        {
-            id: 8,
-            name: "Lisa Thompson",
-            rating: 5,
-            date: "18/09/2022",
-            text: "Great work! The team was efficient and thorough. Will definitely be using their services again in the future.",
-        },
-        {
-            id: 9,
-            name: "James Wilson",
-            rating: 4,
-            date: "05/09/2022",
-            text: "Good service at a fair price. The cleaners were friendly and did a thorough job. Would recommend.",
-        },
-        {
-            id: 10,
-            name: "Amanda Clark",
-            rating: 5,
-            date: "22/08/2022",
-            text: "Absolutely fantastic service! My windows are sparkling clean. The team was professional, quick, and very friendly.",
+            date: "26/03/2025",
+            text: "I didn't fancy being up a ladder at roof height. N&B cleaning did a very thorough job cleaning my fascias and leaving them sparkling. Very friendly, reliable, team and I'm very happy with their work.",
         },
     ];
 
@@ -143,7 +102,7 @@ const Reviews = () => {
 
     const renderReviewCard = (review: Review, index: number, rowKey: string) => (
         <div
-            key={`${rowKey}-${review.id}-${index}`}
+            key={`${rowKey}-${index}`}
             className="inline-block min-w-[350px] max-w-[350px] p-6 bg-white border-2 border-[#EFEFEF] rounded-[24px] shadow-sm whitespace-normal"
         >
             <div className="flex items-center mb-4">
@@ -206,12 +165,14 @@ const Reviews = () => {
                         {firstRow.map((review, index) => renderReviewCard(review, index, 'row1'))}
                     </div>
 
-                    <div
-                        ref={rowTwoRef}
-                        className="flex gap-6 pl-[175px] overflow-x-hidden whitespace-nowrap"
-                    >
-                        {secondRow.map((review, index) => renderReviewCard(review, index, 'row2'))}
-                    </div>
+                    {secondRow.length > 0 && (
+                        <div
+                            ref={rowTwoRef}
+                            className="flex gap-6 pl-[175px] overflow-x-hidden whitespace-nowrap"
+                        >
+                            {secondRow.map((review, index) => renderReviewCard(review, index, 'row2'))}
+                        </div>
+                    )}
                 </div>
             </div>
         </section>
