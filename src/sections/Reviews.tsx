@@ -48,6 +48,36 @@ const Reviews = () => {
             date: "26/03/2025",
             text: "I didn't fancy being up a ladder at roof height. N&B cleaning did a very thorough job cleaning my fascias and leaving them sparkling. Very friendly, reliable, team and I'm very happy with their work.",
         },
+        {
+            name: "D Smith",
+            rating: 5,
+            date: "11/04/2025",
+            text: "I’m happy with his work and highly recommend him",
+        },
+        {
+            name: "Hannah McKinney",
+            rating: 5,
+            date: "09/04/2025",
+            text: "Good, reliable and friendly window cleaner. Would recommend.",
+        },
+        {
+            name: "Alex McKinney",
+            rating: 5,
+            date: "04/04/2025",
+            text: "Friendly, reliable and does a great job on windows and gutters. Highly recommended.",
+        },
+        {
+            name: "Ruari Haines",
+            rating: 5,
+            date: "09/04/2025",
+            text: "5 stars!",
+        },
+        {
+            name: "Mykola Bondariev",
+            rating: 5,
+            date: "08/04/2025",
+            text: "Very nice service, would recommend",
+        },
     ];
 
     useEffect(() => {
