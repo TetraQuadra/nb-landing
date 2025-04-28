@@ -59,7 +59,7 @@ const Footer = () => {
                             <Image src="/phone-call.svg" alt="Phone" width={20} height={20} />
                             +44 7774 974895
                         </a>
-                        <a className="flex items-center gap-2" href="tel:+447774974895">
+                        <a className="flex items-center gap-2" href="tel:+447359810667">
                             <Image src="/phone-call.svg" alt="Phone" width={20} height={20} />
                             +44 7359 810667
                         </a>
