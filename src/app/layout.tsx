@@ -81,7 +81,7 @@ export default function RootLayout({
                 <Footer />
 
                 {/* Google Analytics */}
-                <Script src="https://www.googletagmanager.com/gtag/js?id=G-XN0S2P1G4N" strategy="afterInteractive" />
+                <Script src="https://www.googletagmanager.com/gtag/js?id=G-XN0S2P1G4N" strategy="beforeInteractive" />
                 <Script id="google-analytics" strategy="afterInteractive">
                     {`
                     window.dataLayer = window.dataLayer || [];
