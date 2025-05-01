@@ -19,7 +19,7 @@ export const metadata: Metadata = {
         address: false,
         telephone: false,
     },
-    metadataBase: new URL("https://nbcleaning.com"),
+    metadataBase: new URL("https://nandbcleaning.uk/"),
     alternates: {
         canonical: "/",
     },
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
     openGraph: {
         title: "N&B Cleaning - Professional Window Cleaning Services",
         description: "Professional window cleaning, gutter cleaning, and fascia cleaning services. Experience crystal clear results with our reliable services.",
-        url: "https://nbcleaning.com",
+        url: "https://nandbcleaning.uk/",
         siteName: "N&B Cleaning",
         locale: "en_GB",
         type: "website",
