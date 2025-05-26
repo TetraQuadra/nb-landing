@@ -61,7 +61,7 @@ const Hero = () => {
             </p>
             <Image
                 className={`w-full max-md:h-[445px] max-md:object-cover max-md:rounded-[24px] transition-opacity duration-300 ${imageLoaded ? 'opacity-100' : 'skeleton-loader'}`}
-                src="/hero-image.png"
+                src="/hero-image.webp"
                 alt="Professional window cleaning services by N&B Cleaning"
                 width={1200}
                 height={515}
