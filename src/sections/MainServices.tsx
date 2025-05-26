@@ -8,19 +8,19 @@ const MainServices = () => {
         {
             title: "Window cleaning",
             description: "Professional window cleaning for any height and complexity. We use modern methods and eco-friendly products to achieve crystal clear windows without streaks or spots.",
-            image: "/main-services/service1.png",
+            image: "/main-services/service1.webp",
             link: "/window",
         },
         {
             title: "Gutter cleaning",
             description: "Thorough cleaning of gutter systems from leaves, debris and blockages. We prevent damage to facades and foundations, protecting your home from moisture and dampness.",
-            image: "/main-services/service2.png",
+            image: "/main-services/service2.webp",
             link: "/gutter",
         },
         {
             title: "Fascia cleaning",
             description: "Comprehensive cleaning of fascias and soffits from dirt, mold and algae. We restore the original appearance and extend the service life of facade elements.",
-            image: "/main-services/service3.png",
+            image: "/main-services/service3.webp",
             link: "/fascias",
         },
     ]
