@@ -7,19 +7,19 @@ const OtherServices = () => {
         {
             title: "Graffity cleaning",
             description: "Professional removal of unwanted graffiti from various surfaces without damaging the underlying material. We use specialized solutions to efficiently eliminate all traces of paint and ink.",
-            image: "/other-services/service1.png",
+            image: "/other-services/service1.webp",
             icon: "/other-services/icon1.svg",
         },
         {
             title: "Cladding cleaning",
             description: "Specialized cleaning for all types of exterior cladding to remove built-up dirt, pollution, and biological growth. Restores the appearance and protects your property's cladding from premature deterioration.",
-            image: "/other-services/service2.png",
+            image: "/other-services/service2.webp",
             icon: "/other-services/icon2.svg",
         },
         {
             title: "Conservatory roof cleaning",
             description: "Thorough cleaning of conservatory roofs to remove moss, algae, and debris. Improves natural light penetration and prevents damage to seals and frames, extending the life of your conservatory.",
-            image: "/other-services/service3.png",
+            image: "/other-services/service3.webp",
             icon: "/other-services/icon3.svg",
         }
     ]
