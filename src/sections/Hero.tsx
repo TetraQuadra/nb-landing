@@ -75,7 +75,7 @@ const Hero = () => {
                 onClick={(e) => handleSmoothScroll(e, "#contact")}
             >
                 Contact us
-                <Image src="/arrow-right.svg" alt="" width={20} height={20} aria-hidden="true" />
+                <Image src="/arrow-right.svg" alt="Arrow right" width={20} height={20} aria-hidden="true" />
             </a>
         </section>
     );
