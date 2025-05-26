@@ -151,6 +151,7 @@ const Feedback = () => {
                                         type="button"
                                         onClick={() => handleRatingChange(star)}
                                         className="focus:outline-none"
+                                        aria-label={`Rate ${star} star${star !== 1 ? 's' : ''}`}
                                     >
                                         <svg
                                             width="36"
@@ -160,6 +161,7 @@ const Feedback = () => {
                                             stroke={star <= inputs.rating ? "#16A34A" : "#ADADAD"}
                                             strokeWidth="2"
                                             className="hover:scale-110 transition-transform"
+                                            aria-hidden="true"
                                         >
                                             <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
                                         </svg>
