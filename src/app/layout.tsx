@@ -6,7 +6,7 @@ import Script from "next/script";
 
 export const metadata: Metadata = {
     title: "N&B Cleaning - Professional Window Cleaning Services",
-    description: "Professional window cleaning, gutter cleaning, and fascia cleaning services. Experience crystal clear results with our reliable, high-quality window cleaning services in the UK.",
+    description: "Professional window cleaning, gutter cleaning, and fascia cleaning services in the Norwich, Norfolk and surrounding areas.",
     keywords: "window cleaning, professional window cleaner, gutter cleaning, fascia cleaning, cleaning services, crystal clear windows, residential cleaning, commercial cleaning, window cleaning Norwich, window cleaning Norfolk, gutter cleaning Norwich, fascia cleaning Norwich, commercial cleaning Norwich, residential window cleaning Norwich, window cleaner Cringleford, gutter cleaning Taverham, window cleaning Wymondham, cleaning services Costessey, window cleaning Hethersett, gutter cleaning Mulbarton, fascia cleaning Swardeston, window cleaner Bowthorpe, cleaning company Norwich",
     authors: [{ name: "N&B Cleaning" }],
     generator: "Next.js",
