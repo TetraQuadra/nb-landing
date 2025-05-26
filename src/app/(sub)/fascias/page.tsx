@@ -27,7 +27,7 @@ const Fascias = () => {
                             <div className="p-[10px] border-[2px] border-[#EFEFEF] rounded-[24px] w-[90px] h-[90px] flex items-center justify-center max-md:hidden">
                                 <Image src={service.icon} alt={service.title} width={70} height={70} />
                             </div>
-                            <h3 className="text-[20px] font-[500] max-md:text-center max-md:w-full max-md:font-semibold">{service.title}</h3>
+                            <h2 className="text-[20px] font-[500] max-md:text-center max-md:w-full max-md:font-semibold">{service.title}</h2>
                             <p className="text-[14px] font-normal ">{service.description}</p>
                         </div>
                         <div className="w-1/2 flex justify-center items-center max-md:w-[80%] max-md:relative max-md:mb-4">
