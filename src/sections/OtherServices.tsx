@@ -25,7 +25,7 @@ const OtherServices = () => {
     ]
     return (
         <section className="container mx-auto py-16 px-2 w-full" id="other-services">
-            <h1 className="text-[40px] font-[500] text-center mb-6">Other Services</h1>
+            <h2 className="text-[40px] font-[500] text-center mb-6">Other Services</h2>
             <div className="flex flex-col gap-[20px] w-full">
                 {services.map((service, index) => (
                     <div key={service.title} className={`flex ${index === 1 ? 'flex-row-reverse' : 'flex-row'} p-[32px] max-lg:p-[12px] items-center w-full justify-between gap-[132px] max-md:flex-col-reverse max-md:gap-4`}>

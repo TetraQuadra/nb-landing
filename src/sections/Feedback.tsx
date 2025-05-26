@@ -119,7 +119,7 @@ const Feedback = () => {
     return (
         <section className="w-full py-16 ">
             <div className="mx-auto container px-2 max-lg:max-w-[600px]">
-                <h1 className="text-[40px] font-[500] text-center mb-8">Leave a <span className="text-green-600">feedback</span></h1>
+                <h2 className="text-[40px] font-[500] text-center mb-8">Leave a <span className="text-green-600">feedback</span></h2>
 
                 {formStatus.submitted ? (
                     <div className="text-center p-6 bg-green-50 rounded-[12px] border-2 border-green-600 max-w-[600px] mx-auto">
