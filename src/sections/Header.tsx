@@ -60,7 +60,6 @@ const Header = () => {
     const navLinks = [
         { href: "/", hash: "about", text: "About" },
         { href: "/", hash: "services", text: "Services" },
-        { href: "/commercial-window-cleaning", hash: "commercial-window-cleaning", text: "Commercial Window Cleaning" },
         { href: "/", hash: "reviews", text: "Reviews" }
     ];
 
