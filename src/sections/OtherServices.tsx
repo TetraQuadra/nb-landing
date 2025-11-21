@@ -5,10 +5,10 @@ import Image from "next/image";
 const OtherServices = () => {
     const services = [
         {
-            title: "Graffity cleaning",
-            description: "Professional removal of unwanted graffiti from various surfaces without damaging the underlying material. We use specialized solutions to efficiently eliminate all traces of paint and ink.",
-            image: "/other-services/service1.webp",
-            icon: "/other-services/icon1.svg",
+            title: "Solar panel cleaning",
+            description: "Professional cleaning of solar panels to maximize efficiency and extend their lifespan. We use safe cleaning methods that do not damage the panel surfaces.",
+            image: "/other-services/service4.webp",
+            icon: "/other-services/icon4.svg",
         },
         {
             title: "Cladding cleaning",
@@ -22,12 +22,7 @@ const OtherServices = () => {
             image: "/other-services/service3.webp",
             icon: "/other-services/icon3.svg",
         },
-        {
-            title: "Solar panel cleaning",
-            description: "Professional cleaning of solar panels to maximize efficiency and extend their lifespan. We use safe cleaning methods that do not damage the panel surfaces.",
-            image: "/other-services/service4.webp",
-            icon: "/other-services/icon4.svg",
-        },
+
     ]
     return (
         <section className="container mx-auto py-16 px-2 w-full" id="other-services">
