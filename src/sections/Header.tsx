@@ -106,6 +106,18 @@ const Header = () => {
 
                 <div className="max-md:hidden flex items-center gap-2">
                     <a
+                        href={WHATSAPP_URL}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className={buttonClass}
+                    >
+                        <WhatsAppIcon className="w-5 h-5 shrink-0" />
+                        WhatsApp
+                    </a>
+                    <span className="text-gray-500 text-md select-none" aria-hidden>
+                        or
+                    </span>
+                    <a
                         href={`tel:${PHONE_TEL}`}
                         className={buttonClass}
                         aria-label={`Call ${PHONE_DISPLAY}`}
@@ -124,15 +136,6 @@ const Header = () => {
                         Contact us
                         <Image src="/arrow-right.svg" alt="" width={20} height={20} />
                     </Link>
-                    <a
-                        href={WHATSAPP_URL}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className={`${buttonClass} px-3`}
-                        aria-label="WhatsApp"
-                    >
-                        <WhatsAppIcon className="w-6 h-6" />
-                    </a>
                 </div>
 
                 <button
@@ -174,6 +177,18 @@ const Header = () => {
                     ))}
                     <div className="mt-4 flex flex-col gap-2">
                         <a
+                            href={WHATSAPP_URL}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="bg-green-600 text-white px-4 py-3 rounded-xl flex items-center justify-center gap-2 hover:bg-green-700 transition-colors"
+                        >
+                            <WhatsAppIcon className="w-6 h-6 shrink-0" />
+                            WhatsApp
+                        </a>
+                        <span className="text-center text-md text-gray-500" aria-hidden>
+                            or
+                        </span>
+                        <a
                             href={`tel:${PHONE_TEL}`}
                             className="bg-green-600 text-white px-4 py-3 rounded-xl flex items-center justify-center gap-2 hover:bg-green-700 transition-colors"
                             aria-label={`Call ${PHONE_DISPLAY}`}
@@ -192,15 +207,6 @@ const Header = () => {
                             Contact us
                             <Image src="/arrow-right.svg" alt="" width={20} height={20} />
                         </Link>
-                        <a
-                            href={WHATSAPP_URL}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="bg-green-600 text-white px-4 py-3 rounded-xl flex items-center justify-center hover:bg-green-700 transition-colors"
-                            aria-label="WhatsApp"
-                        >
-                            <WhatsAppIcon className="w-7 h-7" />
-                        </a>
                     </div>
                 </nav>
             </div>
