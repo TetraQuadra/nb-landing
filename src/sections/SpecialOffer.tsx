@@ -10,7 +10,7 @@ const SpecialOffer = () => {
                     </h2>
 
                     <p className="text-xl md:text-2xl mb-2 font-semibold">
-                        Only until December 15th
+                        Only until December 31st
                     </p>
 
                     <p className="text-2xl md:text-3xl lg:text-4xl font-bold text-yellow-300 mb-4">

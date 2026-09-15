@@ -55,10 +55,6 @@ const Footer = () => {
                         </nav>
                     </div>
                     <div className="flex gap-2 items-center max-lg:flex-col max-md:gap-3 max-md:justify-start max-md:items-start">
-                        <a className="flex items-center gap-2" href="tel:+447774974895">
-                            <Image src="/phone-call.svg" alt="Phone" width={20} height={20} />
-                            +44 7774 974895
-                        </a>
                         <a className="flex items-center gap-2" href="tel:+447359810667">
                             <Image src="/phone-call.svg" alt="Phone" width={20} height={20} />
                             +44 7359 810667

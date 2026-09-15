@@ -17,7 +17,7 @@ const Hero = () => {
             "@type": "PostalAddress",
             "addressCountry": "UK"
         },
-        "telephone": "+07774974895",
+        "telephone": "+447359810667",
         "email": "2024windowcleaning@gmail.com",
         "priceRange": "££",
         "openingHours": "Mo-Fr 08:00-18:00",
