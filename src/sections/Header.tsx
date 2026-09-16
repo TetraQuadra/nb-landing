@@ -3,9 +3,8 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useState, useRef, useEffect } from "react";
+import { PHONE_TEL, PHONE_DISPLAY } from "../constants/contact";
 
-const PHONE_TEL = "+447359810667";
-const PHONE_DISPLAY = "+44 7359 810667";
 const WHATSAPP_URL = `https://wa.me/${PHONE_TEL.replace("+", "")}`;
 
 const buttonClass =

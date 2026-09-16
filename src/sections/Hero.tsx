@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Script from "next/script";
 import { useState } from "react";
+import { PHONE_TEL, EMAIL } from "../constants/contact";
 
 const Hero = () => {
     const [imageLoaded, setImageLoaded] = useState(false);
@@ -17,8 +18,8 @@ const Hero = () => {
             "@type": "PostalAddress",
             "addressCountry": "UK"
         },
-        "telephone": "+447359810667",
-        "email": "2024windowcleaning@gmail.com",
+        "telephone": PHONE_TEL,
+        "email": EMAIL,
         "priceRange": "££",
         "openingHours": "Mo-Fr 08:00-18:00",
         "sameAs": [

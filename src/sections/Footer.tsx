@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
+import { PHONE_DISPLAY, EMAIL } from "../constants/contact";
 
 const Footer = () => {
     const handleSmoothScroll = (e: React.MouseEvent<HTMLAnchorElement>, targetId: string) => {
@@ -55,13 +56,13 @@ const Footer = () => {
                         </nav>
                     </div>
                     <div className="flex gap-2 items-center max-lg:flex-col max-md:gap-3 max-md:justify-start max-md:items-start">
-                        <a className="flex items-center gap-2" href="tel:+447359810667">
+                        <a className="flex items-center gap-2" href={`tel:${PHONE_DISPLAY.replace(/\s/g, '')}`}>
                             <Image src="/phone-call.svg" alt="Phone" width={20} height={20} />
-                            +44 7359 810667
+                            {PHONE_DISPLAY}
                         </a>
-                        <a className="flex items-center gap-2" href="mailto:2024windowcleaning@gmail.com">
+                        <a className="flex items-center gap-2" href={`mailto:${EMAIL}`}>
                             <Image src="/mail.svg" alt="Email" width={20} height={20} />
-                            2024windowcleaning@gmail.com
+                            {EMAIL}
                         </a>
                     </div>
                 </div>
