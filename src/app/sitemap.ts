@@ -1,60 +1,71 @@
 import { MetadataRoute } from "next";
+import { CITIES } from "@/constants/cities";
+
+const BASE_URL = "https://nandbcleaning.uk";
 
 export default function sitemap(): MetadataRoute.Sitemap {
+  const cityPages: MetadataRoute.Sitemap = CITIES.map((city) => ({
+    url: `${BASE_URL}/areas/${city.slug}`,
+    lastModified: new Date(),
+    changeFrequency: "monthly",
+    priority: 0.85,
+  }));
+
   return [
     {
-      url: "https://nbcleaning.com",
+      url: BASE_URL,
       lastModified: new Date(),
       changeFrequency: "weekly",
       priority: 1,
     },
     {
-      url: "https://nbcleaning.com/#about",
+      url: `${BASE_URL}/#about`,
       lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 0.8,
     },
     {
-      url: "https://nbcleaning.com/#services",
+      url: `${BASE_URL}/#services`,
       lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 0.8,
     },
     {
-      url: "https://nbcleaning.com/#reviews",
+      url: `${BASE_URL}/#reviews`,
       lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 0.7,
     },
     {
-      url: "https://nbcleaning.com/#contact",
+      url: `${BASE_URL}/#contact`,
       lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 0.9,
     },
     {
-      url: "https://nbcleaning.com/window",
+      url: `${BASE_URL}/window`,
       lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 0.9,
     },
     {
-      url: "https://nbcleaning.com/gutter",
+      url: `${BASE_URL}/gutter`,
       lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 0.9,
     },
     {
-      url: "https://nbcleaning.com/fascias",
+      url: `${BASE_URL}/fascias`,
       lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 0.9,
     },
     {
-      url: "https://nbcleaning.com/commercial-window-cleaning",
+      url: `${BASE_URL}/commercial-window-cleaning`,
       lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 0.9,
     },
+    ...cityPages,
   ];
 }
