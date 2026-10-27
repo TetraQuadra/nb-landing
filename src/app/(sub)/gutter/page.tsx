@@ -1,8 +1,38 @@
-"use client";
-
+import type { Metadata } from "next";
 import Image from "next/image";
 
-const Gutter = () => {
+export const metadata: Metadata = {
+    title: "Gutter Cleaning | Professional Residential & Commercial | N&B Cleaning",
+    description: "Professional gutter cleaning services to protect your home from water damage. Prevent blockages and costly repairs with our reliable gutter cleaning.",
+    keywords: "gutter cleaning, residential gutter cleaning, commercial gutter cleaning, gutter maintenance, blocked gutters, gutter cleaning service UK",
+    alternates: {
+        canonical: "https://www.nandbcleaning.uk/gutter",
+    },
+    openGraph: {
+        title: "Gutter Cleaning — N&B Cleaning",
+        description: "Protect your home from water damage with our professional gutter cleaning services.",
+        url: "https://www.nandbcleaning.uk/gutter",
+        siteName: "N&B Cleaning",
+        locale: "en_GB",
+        type: "website",
+        images: [
+            {
+                url: "/page-images/gutter/service1.png",
+                width: 1200,
+                height: 630,
+                alt: "Professional Gutter Cleaning Services",
+            },
+        ],
+    },
+    twitter: {
+        card: "summary_large_image",
+        title: "Gutter Cleaning — N&B Cleaning",
+        description: "Professional gutter cleaning to protect your home from water damage.",
+        images: ["/page-images/gutter/service1.png"],
+    },
+};
+
+function Gutter() {
     const services = [
         {
             title: "Commercial gutter cleaning",

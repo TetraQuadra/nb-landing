@@ -1,8 +1,38 @@
-"use client";
-
+import type { Metadata } from "next";
 import Image from "next/image";
 
-const Fascias = () => {
+export const metadata: Metadata = {
+    title: "Fascia Cleaning | Professional Residential & Commercial | N&B Cleaning",
+    description: "Professional fascia and soffit cleaning services to restore your property's appearance. Remove dirt, mold, and algae with our expert cleaning.",
+    keywords: "fascia cleaning, soffit cleaning, fascia and soffit cleaning, residential fascia cleaning, commercial fascia cleaning, exterior cleaning UK",
+    alternates: {
+        canonical: "https://www.nandbcleaning.uk/fascias",
+    },
+    openGraph: {
+        title: "Fascia Cleaning — N&B Cleaning",
+        description: "Restore your property's appearance with our professional fascia and soffit cleaning services.",
+        url: "https://www.nandbcleaning.uk/fascias",
+        siteName: "N&B Cleaning",
+        locale: "en_GB",
+        type: "website",
+        images: [
+            {
+                url: "/page-images/fascias/service1.png",
+                width: 1200,
+                height: 630,
+                alt: "Professional Fascia Cleaning Services",
+            },
+        ],
+    },
+    twitter: {
+        card: "summary_large_image",
+        title: "Fascia Cleaning — N&B Cleaning",
+        description: "Professional fascia and soffit cleaning to restore your property's appearance.",
+        images: ["/page-images/fascias/service1.png"],
+    },
+};
+
+function Fascias() {
     const services = [
         {
             title: "Commercial fascia cleaning",

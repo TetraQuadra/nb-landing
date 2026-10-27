@@ -7,12 +7,12 @@ export const metadata: Metadata = {
     description: "Professional commercial window cleaning for offices, shops, and high-rise buildings. Flexible schedules, insured staff, and sparkling results. Get your free commercial quote today.",
     keywords: "commercial window cleaning, office window cleaning, shopfront window cleaning, high-rise window cleaning, professional window cleaners, business window cleaning UK",
     alternates: {
-        canonical: "/commercial-window-cleaning",
+        canonical: "https://www.nandbcleaning.uk/commercial-window-cleaning",
     },
     openGraph: {
         title: "Commercial Window Cleaning — N&B Cleaning",
         description: "Keep your business looking its best with our professional commercial window cleaning. Book today.",
-        url: "https://nandbcleaning.uk/commercial-window-cleaning",
+        url: "https://www.nandbcleaning.uk/commercial-window-cleaning",
         siteName: "N&B Cleaning",
         locale: "en_GB",
         type: "website",
@@ -72,8 +72,8 @@ const CommercialWindowCleaning = () => {
                         "provider": {
                             "@type": "Organization",
                             "name": "N&B Cleaning",
-                            "url": "https://nandbcleaning.uk",
-                            "logo": "https://nandbcleaning.uk/logo.png",
+                            "url": "https://www.nandbcleaning.uk",
+                            "logo": "https://www.nandbcleaning.uk/logo.png",
                             "contactPoint": {
                                 "@type": "ContactPoint",
                                 "telephone": "+44XXXXXXXXXX",
@@ -86,7 +86,7 @@ const CommercialWindowCleaning = () => {
                         },
                         "offers": {
                             "@type": "Offer",
-                            "url": "https://nandbcleaning.uk/commercial-window-cleaning",
+                            "url": "https://www.nandbcleaning.uk/commercial-window-cleaning",
                             "price": "0",
                             "priceCurrency": "GBP",
                             "description": "Free commercial window cleaning quote"

@@ -1,8 +1,38 @@
-"use client";
-
+import type { Metadata } from "next";
 import Image from "next/image";
 
-const Window = () => {
+export const metadata: Metadata = {
+    title: "Window Cleaning | Professional Residential & Commercial | N&B Cleaning",
+    description: "Professional window cleaning services for homes and businesses. Crystal clear windows, eco-friendly products, and reliable service. Get your free quote today.",
+    keywords: "window cleaning, residential window cleaning, commercial window cleaning, professional window cleaners, window cleaning service UK",
+    alternates: {
+        canonical: "https://www.nandbcleaning.uk/window",
+    },
+    openGraph: {
+        title: "Window Cleaning — N&B Cleaning",
+        description: "Professional window cleaning for your home and business. Experience the difference with our reliable, high-quality services.",
+        url: "https://www.nandbcleaning.uk/window",
+        siteName: "N&B Cleaning",
+        locale: "en_GB",
+        type: "website",
+        images: [
+            {
+                url: "/page-images/window/service1.png",
+                width: 1200,
+                height: 630,
+                alt: "Professional Window Cleaning Services",
+            },
+        ],
+    },
+    twitter: {
+        card: "summary_large_image",
+        title: "Window Cleaning — N&B Cleaning",
+        description: "Professional window cleaning for homes and businesses. Crystal clear results every time.",
+        images: ["/page-images/window/service1.png"],
+    },
+};
+
+function Window() {
     const services = [
         {
             title: "Commercial window cleaning",
